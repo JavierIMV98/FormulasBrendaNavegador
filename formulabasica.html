@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formula</title>
+    <style>
+        .formula{
+            display: inline;
+            width: 12em;
+            height: 2em;
+            margin-top: 1em;
+            margin-right: 1em;
+            
+        }
+        body{
+            align-items: center;
+        }
+        form{
+            
+            margin-bottom: 0px;
+            
+        }
+        #calcular{
+            
+            margin-top: 10px;
+            text-align: center;
+            width: 12.7em;
+            height: 2.5em;
+            
+        }
+        /*.grid-container{
+
+        }*/
+    </style>
+
+</head>
+<body class="grid-container">
+    <a href="http://127.0.0.1:5500/index.html">Volver a Indice </a>
+    <h1 for="">Formula []i * Vi = []f * Vf</h1>
+    <h3>¿Qué desea calcular?</h3>
+    <form name="formCalculo">
+        <input type="radio" name="calculo" id="cinicial" value="cinicial"> <label>[] Inicial</label>
+        <input type="radio" name="calculo" id="vinicial" value="vinicial"> <label>Vol Inicial</label>
+        <input type="radio" name="calculo" id="cfinal" value="cfinal"> <label>[] Final</label>
+        <input type="radio" name="calculo" id="vfinal" value="vfinal"> <label>Vol Final</label>
+    </form>
+        
+        
+    
+    <br>
+    <input class="formula" type="number" placeholder="[] Inicial" id="concInicial" value="">
+    <input class="formula" type="number" placeholder="Vol Inicial" id="volInicial" value="">
+    <input class="formula" type="number" placeholder="[] Final" id="conFinal" value="">
+    <input class="formula" type="number" placeholder="Vol Final" id="volFinal" value="">
+    <br>
+    <button id="calcular">Calcular</button>
+    <h3 id="resultado">Resultado = </h3>
+
+    <script >
+        document.getElementById("calcular").
+        addEventListener("click", calcularFormula);
+
+        function calcularFormula() {
+            
+            let concInicial = document.getElementById("concInicial");
+            let volInicial = document.getElementById("volInicial");
+            let conFinal = document.getElementById("conFinal");
+            let volFinal = document.getElementById("volFinal");
+            let lista = [concInicial.value, volInicial.value, 
+        conFinal.value, volFinal.value];
+        
+            let resultadohtml = document.getElementById("resultado");
+            
+            let radiobtns = document.querySelectorAll('input[name="calculo"]')
+            let seleccionado;
+            for(let radiobtn of radiobtns){
+                if(radiobtn.checked){
+                    seleccionado=radiobtn.value;
+                    break;
+                }
+            }
+            switch(seleccionado){
+                case "cinicial":
+                    resultadohtml.innerHTML = "[] Inicial: "+(lista[2]*lista[3])/lista[1];
+                    break;
+                case "vinicial":
+                    resultadohtml.innerHTML = "Vol Inicial: "+(lista[2]*lista[3])/lista[0];
+                    break;
+                case "cfinal":
+                    resultadohtml.innerHTML = "[] Final: "+(lista[0]*lista[1])/lista[3];
+                    break;
+                case "vfinal":
+                    resultadohtml.innerHTML = "Vol Final: "+(lista[0]*lista[1])/lista[2];
+                    break;
+            }
+        
+        }
+    </script>
+</body>
+</html>
