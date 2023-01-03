@@ -12,39 +12,179 @@
         body{
             
             min-height: 100%;
-            background-color: #FFDEE9;
-            background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+            background-color: #2c2b30;
+            background-image: linear-gradient(90deg, #4f4f51 0%, #2c2b30 100%);
         }
-        h1{
-            color: rgb(27, 46, 46);
-        }
-        a{
-            font-size: large;
-            color:darkslategrey;
+        p{
+            color: #d6d6d6;
             
         }
-        div{
+        a{
+            
+            color:#d6d6d6;
+            
+        }
+        @media(min-width:400px){  
+            p{
+                
+                font-size: 200%;
+            }
+            h2{
+                
+                display: none;
+            }      
+            .item0{
+            grid-area: header;
+            }
+            .item1{
+                grid-area: contenta;
+            }
+            .item2{
+                grid-area: contentb;
+            }
+            .item3{
+                grid-area: contentc;
+            }
+            .item4{
+                grid-area: contentd;
+            }
+            .item5{
+                grid-area: contente;
+            }
+            .grid-container{
+                display: grid;
+                grid-gap: 10px;
+                
+                grid-template-areas: 
+                    "header header contenta contenta contenta"
+                    "header header contentb contentb contentb"
+                    " ..... ...... contentc contentc contentc"
+                    "..... ...... contentd contentd contentd"
+                    "..... ..... contente contente contente"
+                    ;
+            }
+            .box{
+                background-color: rgb(19, 17, 20);
+                border-radius: 5px;
+                padding: 5%;
+                font-size: 200%;
+                text-align: center;
+            }
+        }
+
+        @media(max-width:399px){
+        h2{
+            color: #d6d6d6
+            
+        }
+        p{
+            display: none;
+        }
+        .headera{
+            grid-area: headera;
+            transform: rotate(270deg);
+            margin-top: 30px;
+        }
+        .headerb{
+            grid-area: headerb;
+            transform: rotate(270deg);
+        }
+        .headerc{
+            grid-area: headerc;
+            transform: rotate(270deg);
+        }
+        .headerd{
+            grid-area: headerd;
+            transform: rotate(270deg);
+        }
+        .headere{
+            grid-area: headere;
+            transform: rotate(270deg);
+            
+        }
+        .item0{
+            grid-area: header;
+            
+        }
+        .item1{
+            grid-area: contenta;
+        }
+        .item2{
+            grid-area: contentb;
+        }
+        .item3{
+            grid-area: contentc;
+        }
+        .item4{
+            grid-area: contentd;
+        }
+        .item5{
+            grid-area: contente;
+        }
+        .grid-container{
+            display: grid;
+            grid-gap: 10px;
+            
+            grid-template-areas: 
+                " headera contenta contenta"
+                " headerb contentb contentb"
+                " headerc contentc contentc"
+                " headerd contentd contentd"
+                " headere contente contente"
+                ;
+        }
+        .box{
+            background-color: rgb(19, 17, 20);
+            border-radius: 5px;
+            padding: 12%;
+            font-size: 150%;
             text-align: center;
+            
         }
-        #asd{
-            min-height: 50%;
         }
+            
     </style>
 </head>
 <body>
-    <div>
-    <h1>Formulario:</h1>
+    <div class="grid-container">
+        <div class="item0">
+            <p>Formulario para Brenda:</p>
+        </div>
+        <div class="headere">
+            <h2>F O </h2>
+        </div>
+        <div class="headerd">
+            <h2>R M </h2>
+        </div>
+        <div class="headerc">
+            <h2>U L </h2>
+        </div>
+        <div class="headerb">
+            <h2>A R </h2>
+        </div>
+        <div class="headera">
+            <h2>I O</h2>
+        </div>
+    
+        <div  class="box item1"> 
+            <a href="extra/formulabasica.html">Formula dilución básica</a>
+        </div>
+        <br>
+        <div class="box item2">
+            <a href="extra/dilucionseriada.html">Diluciones seriadas</a>
+        </div>
+        <br>
+        <div class="box item3">
+            <a href="extra/alicuota.html">Alicuota</a>
+        </div>
+        <br>
+        <div class="box item4">
+            <a href="extra/formulasgenerales.html">Formulas generales </a>
+        </div>
+        <br>
+        <div class="box item5">
+            <a href="extra/conversiones.html">Conversiones</a>
+        </div>
     </div>
-    <div id="asd">
-    <a href="extra/formulabasica.html">Formula dilución básica</a>
-    <br>
-    <a href="extra/dilucionseriada.html">Diluciones seriadas</a>
-    <br>
-    <a href="extra/alicuota.html">Alicuota</a>
-    <br>
-    <a href="extra/formulasgenerales.html">Formulas generales </a>
-    <br>
-    <a href="extra/conversiones.html">Conversiones</a>
-</div>
 </body>
 </html>
