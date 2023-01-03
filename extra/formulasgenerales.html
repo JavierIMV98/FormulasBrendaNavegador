@@ -43,80 +43,107 @@
             margin-right: 1em;
             
         }
+        div{
+            text-align: center;
+            
+            
+        }
+        div>h3{
+            color: #d6d6d6;
+        }
     </style>
 </head>
 <body>
     <a href="../index.html">Volver a Indice </a>
+
+<div>    
     <h3>%P/P:</h3>
     <input class="formula" type="number" placeholder="peso del soluto (g)" id="psoluto" value="">
     <input class="formula" type="number" placeholder="peso solucion (g)" id="psolucion" value="">
     <br>
     <button class="btnCalcular" id="calcularpp">Calcular</button>
     <h3 id="idresultadopp">Resultado:  </h3>
+</div>    
 <hr>
     <br>
+<div>    
     <h3>%V/V:</h3>
     <input class="formula" type="number" placeholder="volumen del soluto (mL)" id="vsoluto" value="">
     <input class="formula" type="number" placeholder="volumen solucion (mL)" id="vsolucion" value="">
     <br>
     <button class="btnCalcular" id="calcularvv">Calcular</button>
     <h3 id="idresultadovv">Resultado:  </h3>
+</div>    
 <hr>
     <br>
+<div>    
     <h3>%P/V:</h3>
     <input class="formula" type="number" placeholder="peso del soluto (g)" id="pvsoluto" value="">
     <input class="formula" type="number" placeholder="volumen solucion (mL)" id="pvsolucion" value="">
     <br>
     <button class="btnCalcular" id="calcularpv">Calcular</button>
     <h3 id="idresultadopv">Resultado:  </h3>
+</div>    
 <hr>
     <br>
+<div>    
     <h3>Densidad:</h3>
     <input class="formula" type="number" placeholder="peso del soluto (g)" id="dsoluto" value="">
     <input class="formula" type="number" placeholder="volumen solucion (mL)" id="dsolucion" value="">
     <br>
     <button class="btnCalcular" id="calculard">Calcular</button>
     <h3 id="idresultadod">Resultado:  </h3>
-<hr>
+</div>
+    <hr>
     <br>
+<div>    
     <h3>Masa (a partir de Densidad):</h3>
     <input class="formula" type="number" placeholder="densidad (g/mL)" id="dens" value="">
     <input class="formula" type="number" placeholder="volumen solucion (mL)" id="vdsolucion" value="">
     <br>
     <button class="btnCalcular" id="calcularmd">Calcular</button>
     <h3 id="idresultadomd">Resultado:  </h3>
-<hr>
+</div>    
+    <hr>
     <br>
+<div>    
     <h3>Molaridad:</h3>
     <input class="formula" type="number" placeholder="moles de soluto" id="molsoluto" value="">
     <input class="formula" type="number" placeholder="litros solucion" id="lsolucion" value="">
     <br>
     <button class="btnCalcular" id="calcularmolaridad">Calcular</button>
-    <h3 id="idresultadomolaridad">Resultado:  </h3>
-<hr>
+    <h3 id="idresultadomolaridad">Resultado: </h3>
+</div>
+    <hr>
     <br>
+<div>    
     <h3>Molalidad:</h3>
     <input class="formula" type="number" placeholder="moles de soluto" id="mollsoluto" value="">
     <input class="formula" type="number" placeholder="masa solvente (kg)" id="msolvente" value="">
     <br>
     <button class="btnCalcular" id="calcularmolalidad">Calcular</button>
-    <h3 id="idresultadomolalidad">Resultado:  </h3>
-<hr>
+    <h3 id="idresultadomolalidad">Resultado: </h3>
+</div> 
+    <hr>
     <br>
+<div>    
     <h3>Normalidad:</h3>
     <input class="formula" type="number" placeholder="N° eq soluto" id="eqsoluto" value="">
     <input class="formula" type="number" placeholder="litros disolucion" id="litdisoluci" value="">
     <br>
     <button class="btnCalcular" id="calcularnormalidad">Calcular</button>
-    <h3 id="idresultadonormalidad">Resultado:  </h3>
-<hr>
+    <h3 id="idresultadonormalidad">Resultado: </h3>
+</div>
+    <hr>
     <br>
+<div>    
     <h3>Fraccion molar soluto(x):</h3>
     <input class="formula" type="number" placeholder="moles de soluto" id="molessoluto" value="">
     <input class="formula" type="number" placeholder="moles solucion (n's + n'd)" id="msolucion" value="">
     <br>
     <button class="btnCalcular" id="calcularfrmolar">Calcular</button>
-    <h3 id="idresultadofrmolar">Resultado:  </h3>
+    <h3 id="idresultadofrmolar">Resultado: </h3>
+</div> 
 
     <script>
         document.getElementById("calcularpp").
