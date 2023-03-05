@@ -30,7 +30,6 @@
             width: 12em;
             height: 2em;
             margin-top: 1em;
-            margin-right: 1em;
             
         }
         body{
@@ -49,6 +48,35 @@
             height: 2.5em;
             
         }
+        #container-uno{
+            display: grid;
+            place-items: center;
+        }
+        .container-dos{
+            display: grid;
+            place-items: center;
+        }
+        .card-form{
+            display: flex;
+            box-shadow: 2px 2px 2px #171414;   
+            background-color: #0d1320;
+            margin: 10px;
+            height: 40px;
+            width: 60vw;
+            justify-content: center;
+            align-items: center;
+        }
+        label{
+            color: white;
+        }
+        h1{
+            text-align: center; 
+            color: rgb(242, 240, 246);
+        }
+        h3{
+            text-align: center; 
+            color: rgb(242, 240, 246);
+        }
         /*.grid-container{
 
         }*/
@@ -59,23 +87,36 @@
     <a href="../index.html">Volver a Indice </a>
     <h1 for="">Formula []i * Vi = []f * Vf</h1>
     <h3>¿Qué desea calcular?</h3>
-    <form name="formCalculo">
-        <input type="radio" name="calculo" id="cinicial" value="cinicial"> <label>[] Inicial</label>
-        <input type="radio" name="calculo" id="vinicial" value="vinicial"> <label>Vol Inicial</label>
-        <input type="radio" name="calculo" id="cfinal" value="cfinal"> <label>[] Final</label>
-        <input type="radio" name="calculo" id="vfinal" value="vfinal"> <label>Vol Final</label>
+    <form id="container-uno" name="formCalculo">
+        <div class="card-form">
+            <input type="radio" name="calculo" id="cinicial" value="cinicial"> <label for="cinicial">Concentración Inicial</label>
+        </div>
+        <div class="card-form">
+            <input type="radio" name="calculo" id="vinicial" value="vinicial"> <label for="vinicial">Volumen Inicial</label>
+        </div>
+        <div class="card-form">
+            <input type="radio" name="calculo" id="cfinal" value="cfinal"> <label for="cfinal">Concentración Final</label>
+        </div>
+        <div class="card-form">
+            <input type="radio" name="calculo" id="vfinal" value="vfinal"> <label for="vfinal">Volumen Final</label>
+        </div>
     </form>
         
         
     
     <br>
-    <input class="formula" type="number" placeholder="[] Inicial" id="concInicial" value="">
-    <input class="formula" type="number" placeholder="Vol Inicial" id="volInicial" value="">
-    <input class="formula" type="number" placeholder="[] Final" id="conFinal" value="">
-    <input class="formula" type="number" placeholder="Vol Final" id="volFinal" value="">
+    <div class="container-dos">
+        <input class="formula" type="number" placeholder="[] Inicial" id="concInicial" value="">
+        <input class="formula" type="number" placeholder="Vol Inicial" id="volInicial" value="">
+        <input class="formula" type="number" placeholder="[] Final" id="conFinal" value="">
+        <input class="formula" type="number" placeholder="Vol Final" id="volFinal" value="">
+        <br>
+        <button id="calcular">Calcular</button>
+    </div>
+    
+    <h3 id="resultado">Resultado: </h3>
     <br>
-    <button id="calcular">Calcular</button>
-    <h3 id="resultado">Resultado = </h3>
+    <br>
 
     <script >
         document.getElementById("calcular").
