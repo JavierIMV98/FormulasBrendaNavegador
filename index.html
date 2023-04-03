@@ -27,7 +27,7 @@
             color:#d6d6d6;
             
         }
-        @media(min-width:400px){  
+        @media(min-width:501px){  
             p{
                 
                 font-size: 200%;
@@ -45,9 +45,6 @@
             .item2{
                 grid-area: contentb;
             }
-            .item3{
-                grid-area: contentc;
-            }
             .item4{
                 grid-area: contentd;
             }
@@ -61,7 +58,6 @@
                 grid-template-areas: 
                     "header header contenta contenta contenta"
                     "header header contentb contentb contentb"
-                    " ..... ...... contentc contentc contentc"
                     "..... ...... contentd contentd contentd"
                     "..... ..... contente contente contente"
                     ;
@@ -69,46 +65,23 @@
             .box{
                 background-color: rgb(19, 17, 20);
                 border-radius: 5px;
-                padding: 5%;
+                height: 23vh;
                 font-size: 200%;
                 text-align: center;
+                box-shadow: 2px 2px 2px #171414;
+                line-height: 21vh;
             }
         }
 
-        @media(max-width:399px){
+        @media(max-width:500px){
         h2{
             color: #d6d6d6
             
         }
-        p{
-            display: none;
-        }
-        .headera{
-            grid-area: headera;
-            transform: rotate(270deg);
-            margin-top: 30px;
-        }
-        .headerb{
-            grid-area: headerb;
-            transform: rotate(270deg);
-            margin-top: 30px;
-        }
-        .headerc{
-            grid-area: headerc;
-            transform: rotate(270deg);
-        }
-        .headerd{
-            grid-area: headerd;
-            transform: rotate(270deg);
-            margin-top: 30px;
-        }
-        .headere{
-            grid-area: headere;
-            transform: rotate(270deg);
-            
-        }
         .item0{
             grid-area: header;
+            font-size: 30px;
+            text-align: center;
             
         }
         .item1{
@@ -129,21 +102,26 @@
         .grid-container{
             display: grid;
             grid-gap: 10px;
+            width: 90vw;
+            margin: 10px;
             
             grid-template-areas: 
-                " headera contenta contenta"
-                " headerb contentb contentb"
-                " headerc contentc contentc"
-                " headerd contentd contentd"
-                " headere contente contente"
+                " header header"
+                " contenta contenta"
+                " contentb contentb"
+                " contentd contentd"
+                " contente contente"
                 ;
         }
         .box{
             background-color: rgb(19, 17, 20);
             border-radius: 5px;
-            padding: 12%;
+            height: 15vh;
             font-size: 150%;
             text-align: center;
+            box-shadow: 2px 2px 2px #171414;
+            line-height: 14vh;
+            ;
             
         }
         }
@@ -155,32 +133,12 @@
         <div class="item0">
             <p>Formulario para Brenda:</p>
         </div>
-        <div class="headere">
-            <h2>F O </h2>
-        </div>
-        <div class="headerd">
-            <h2>R M </h2>
-        </div>
-        <div class="headerc">
-            <h2>U L </h2>
-        </div>
-        <div class="headerb">
-            <h2>A R </h2>
-        </div>
-        <div class="headera">
-            <h2>I O</h2>
-        </div>
-    
         <div  class="box item1"> 
             <a href="extra/formulabasica.html">Formula dilución básica</a>
         </div>
         <br>
         <div class="box item2">
             <a href="extra/dilucionseriada.html">Diluciones seriadas</a>
-        </div>
-        <br>
-        <div class="box item3">
-            <a href="extra/alicuota.html">Alicuota [*]</a>
         </div>
         <br>
         <div class="box item4">
