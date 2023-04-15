@@ -26,10 +26,126 @@
             color:white;
             
         }
+        h3{
+            color: whitesmoke;
+        }
+        h2{
+            color: whitesmoke;
+            text-align: center;
+        }
+        h4{
+            color: whitesmoke;
+        }
+        .cuadro{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: center;
+            gap: 10px;
+        }
+        .card{
+            background-color: #0d1320;
+            padding: 10px;
+        }
+        @media(max-width:500px){
+            .cuadro{
+                display: flex;
+                flex-direction: column;
+            }
+        }
     </style>
 </head>
 <body>
     <a href="../index.html">Volver a Indice </a>
-    <h1>EN CONSTRUCCION</h1>
+    <h2>Multiples Conversiones</h2>
+    <div class="cuadro">
+        
+        <div class="card">
+                
+            <h3>Conversion Unidad "Entera" a mili (m)</h3>
+            <h4>(x1000)</h4>
+            <input type="number" name="numbermili" id="numbermili" placeholder="Valor a transformar">
+            <button class="btnCalcular" id="calcularmili">Calcular</button>
+            <h3 id="resultadoxamili">Resultado:  </h3>
+        </div>
+        <div class="card">
+            <h3>Conversion Unidad "Entera" a micro (u)</h3>
+            <h4>(x1000000)</h4>
+            <input type="number" name="numbermicro" id="numbermicro" placeholder="Valor a transformar">
+            <button class="btnCalcular" id="calcularmicro">Calcular</button>
+            <h3 id="resultadoxamicro">Resultado:  </h3>
+        </div>
+        <div class="card"> 
+            <h3>Conversion Unidad "Entera" a nano (n)</h3>
+            <h4>(x1000000000)</h4>
+            <input type="number" name="numbernano" id="numbernano" placeholder="Valor a transformar">
+            <button class="btnCalcular" id="calcularnano">Calcular</button>
+            <h3 id="resultadoxanano">Resultado:  </h3>
+        </div>
+
+        <div class="card">
+                
+            <h3>Conversion mili (m) a "Unidad Entera"</h3>
+            <h4>(/1000)</h4>
+            <input type="number" name="numbermilia" id="numbermilia" placeholder="Valor a transformar">
+            <button class="btnCalcular" id="calcularmilia">Calcular</button>
+            <h3 id="resultadoxamilia">Resultado:  </h3>
+        </div>
+        <div class="card">
+            <h3>Conversion micro (u) a "Unidad Entera"</h3>
+            <h4>(/1000000)</h4>
+            <input type="number" name="numbermicroa" id="numbermicroa" placeholder="Valor a transformar">
+            <button class="btnCalcular" id="calcularmicroa">Calcular</button>
+            <h3 id="resultadoxamicroa">Resultado:  </h3>
+        </div>
+        <div class="card"> 
+            <h3>Conversion nano (n) a "Unidad Entera"</h3>
+            <h4>(/1000000000)</h4>
+            <input type="number" name="numbernanoa" id="numbernanoa" placeholder="Valor a transformar">
+            <button class="btnCalcular" id="calcularnanoa">Calcular</button>
+            <h3 id="resultadoxananoa">Resultado:  </h3>
+        </div>
+    </div>
+    <script>
+        document.getElementById("calcularmili").addEventListener("click",xamili);
+        function xamili() {
+            let valor = document.getElementById("numbermili").value;
+            let resultado = valor*1000;
+            document.getElementById("resultadoxamili").innerHTML = "Resultado: " + resultado + " m(Unidad)"
+        }
+        document.getElementById("calcularmicro").addEventListener("click",xamicro);
+        function xamicro() {
+            let valor = document.getElementById("numbermicro").value;
+            let resultado = valor*1000000;
+            document.getElementById("resultadoxamicro").innerHTML = "Resultado: " + resultado + " u(Unidad)"
+        }
+        document.getElementById("calcularnano").addEventListener("click",xanano);
+        function xanano() {
+            let valor = document.getElementById("numbernano").value;
+            let resultado = valor*1000000000;
+            document.getElementById("resultadoxanano").innerHTML = "Resultado: " + resultado + " n(Unidad)"
+        }
+
+
+        
+        document.getElementById("calcularmilia").addEventListener("click",xamilia);
+        function xamilia() {
+            let valor = document.getElementById("numbermilia").value;
+            let resultado = valor/1000;
+            document.getElementById("resultadoxamilia").innerHTML = "Resultado: " + resultado + " (Unidad)"
+        }
+        document.getElementById("calcularmicroa").addEventListener("click",xamicroa);
+        function xamicroa() {
+            let valor = document.getElementById("numbermicroa").value;
+            let resultado = valor/1000000;
+            document.getElementById("resultadoxamicroa").innerHTML = "Resultado: " + resultado + " (Unidad)"
+        }
+        document.getElementById("calcularnanoa").addEventListener("click",xananoa);
+        function xananoa() {
+            let valor = document.getElementById("numbernanoa").value;
+            let resultado = valor/1000000000;
+            document.getElementById("resultadoxananoa").innerHTML = "Resultado: " + resultado + " (Unidad)"
+        }
+    </script>
 </body>
 </html>
